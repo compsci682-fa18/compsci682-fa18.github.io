@@ -4,8 +4,6 @@ mathjax: true
 permalink: /notes/important_message/
 ---
 
-## Important Message From Prof. Learned-Miller
-
 Welcome to 682!
 
 This class will teach you the core methods and principles behind the incredibly exciting revolution currently happening in the world of machine learning: the renaissance of deep neural networks.
