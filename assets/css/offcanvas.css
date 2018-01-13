@@ -152,6 +152,14 @@ h2 {
   width: -o-calc(41.875%);
   width: calc(41.875%);
 }
+.footer-col-4 {
+  width: 300px; /*fallback*/
+  width: -webkit-calc(33% - 10px);
+  width: -moz-calc(33% - 10px);
+  width: -o-calc(33% - 10px);
+  width: calc(33% - 10px);
+  margin-right: 10px
+}
 .site-footer ul { list-style: none; }
 .site-footer li,
 .site-footer p {
