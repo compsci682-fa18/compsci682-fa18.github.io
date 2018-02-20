@@ -58,6 +58,8 @@ command:
 python setup.py build_ext --inplace
 ```
 
+**NOTE:** Check [this page](https://github.com/cython/cython/wiki/CythonExtensionsOnWindows) if you are using windows and having the "unable to find vcvarsall.bat" error.
+
 **Start Jupyter Notebook:**
 After you have the CIFAR-10 data, you should start the Jupyter Notebook server from the
 `assignment2` directory. If you are unfamiliar with Jupyter, you should read our
