@@ -18,22 +18,22 @@ In this assignment you will practice putting together a simple image classificat
 
 ## Setup
 
-Get the code as a zip file [here](http://cs231n.github.io/assignments/2018/spring1718_assignment1.zip).
+Get the code as a zip file [here](http://compsci682-fa18.github.io/assignments/assignments2018/spring1718_assignment1.zip).
 
-You can follow the setup instructions [here](http://cs231n.github.io/setup-instructions/).
+You can follow the setup instructions [here](http://compsci682-fa18.github.io/setup-instructions/).
 
 ### Download data:
 Once you have the starter code (regardless of which method you choose above), you will need to download the CIFAR-10 dataset.
 Run the following from the `assignment1` directory:
 
 ```bash
-cd cs231n/datasets
+cd datasets
 ./get_datasets.sh
 ```
 
 ### Start IPython:
 After you have the CIFAR-10 data, you should start the IPython notebook server from the
-`assignment1` directory, with the `jupyter notebook` command. (See the [Google Cloud Tutorial](http://cs231n.github.io/gce-tutorial/) for any additional steps you may need to do for setting this up, if you are working remotely)
+`assignment1` directory, with the `jupyter notebook` command. (See the [Google Cloud Tutorial](http://compsci682-fa18.github.io/gce-tutorial/) for any additional steps you may need to do for setting this up, if you are working remotely)
 
 If you are unfamiliar with IPython, you can also refer to our
 [IPython tutorial](/ipython-tutorial).
@@ -66,7 +66,7 @@ The IPython Notebook **features.ipynb** will walk you through this exercise, in 
 ### Submitting your work
 There are **_two_** steps to submitting your assignment:
 
-**1.** Submit a pdf of the completed iPython notebooks to [Gradescope](https://gradescope.com/courses/17367). If you are enrolled in the course, then you should have already been automatically added to the course on Gradescope. 
+**1.** Submit a pdf of the completed iPython notebooks to [Gradescope](https://gradescope.com/courses/24357). If you are enrolled in the course, then you should have already been automatically added to the course on Gradescope. 
 
 To produce a pdf of your work, you can first convert each of the .ipynb files to HTML. To do this, simply run 
 
@@ -78,23 +78,4 @@ for each of the notebooks, where `FILE.ipynb` is the notebook you want to conver
 **Important:** _Please make sure that the submitted notebooks have been run and the cell outputs are visible._
 
 
-**2.** Submit a zip file of your assignment on AFS. To do this, run the provided `collectSubmission.sh` script, which will produce a file called `assignment1.zip`. You will then need to SCP this file over to Stanford AFS using the following command (entering your Stanford password if requested):
-
-```bash
-# Run from the assignment directory where the zip file is located
-scp assignment1.zip YOUR_SUNET@myth.stanford.edu:~/DEST_PATH
-```
-
-`YOUR_SUNET` should be replaced with your SUNetID (e.g. `jdoe`), and `DEST_PATH` should be a path to an existing directory on AFS where you want the zip file to be copied to (you may want to create a CS231N directory for convenience). Once this is done, run the following:
-
- ```bash
-# SSH into the Stanford Myth machines 
-ssh YOUR_SUNET@myth.stanford.edu
-
-# Descend into the directory where the zip file is now located
-cd DEST_PATH
-
-# Run the script to actually submit the assignment
-/afs/ir/class/cs231n/submit
-```
-Once you run the submit script, simply follow the on-screen prompts to finish submitting the assignment on AFS. If successful, you should see a "SUBMIT SUCCESS" message output by the script.
+**2.** Submit a zip file of your assignment to [Gradescope](https://gradescope.com/courses/24357). To do this, run the provided `collectSubmission.sh` script, which will produce a file called `assignment1.zip`. 
