@@ -5,13 +5,15 @@ permalink: /setup-instructions/
 ---
 
 ## Setup
+<!--
 You can work on the assignment in one of two ways: locally on your own machine, or on a virtual machine on Google Cloud. 
 
 
 ### Working locally
+-->
 
 **Installing Anaconda:**
-If you decide to work locally, we recommend using the free [Anaconda Python distribution](https://www.anaconda.com/download/), which provides an easy way for you to handle package dependencies. Please be sure to download the Python 3 version, which currently installs Python 3.6. We are no longer supporting Python 2.
+We recommend using the free [Anaconda Python distribution](https://www.anaconda.com/download/), which provides an easy way for you to handle package dependencies. Please be sure to download the Python 3 version, which currently installs Python 3.6. We are no longer supporting Python 2.
 
 **Anaconda Virtual environment:**
 Once you have Anaconda installed, it makes sense to create a virtual environment for the course. If you choose not to use a virtual environment, it is up to you to make sure that all dependencies for the code are installed globally on your machine. To set up a virtual environment, run (in a terminal)
