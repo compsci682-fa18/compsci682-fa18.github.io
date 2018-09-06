@@ -21,6 +21,7 @@ In this assignment you will practice putting together a simple image classificat
 Get the code as a zip file [here](http://compsci682-fa18.github.io/assignments/assignments2018/spring1718_assignment1.zip).
 
 You can follow the setup instructions [here](http://compsci682-fa18.github.io/setup-instructions/).
+<!--You can follow the setup instructions [here](http://compsci682-fa18.github.io/setup/).-->
 
 ### Download data:
 Once you have the starter code (regardless of which method you choose above), you will need to download the CIFAR-10 dataset.
@@ -33,10 +34,11 @@ cd datasets
 
 ### Start IPython:
 After you have the CIFAR-10 data, you should start the IPython notebook server from the
-`assignment1` directory, with the `jupyter notebook` command. (See the [Google Cloud Tutorial](http://compsci682-fa18.github.io/gce-tutorial/) for any additional steps you may need to do for setting this up, if you are working remotely)
+`assignment1` directory, with the `jupyter notebook` command. 
+<!--(See the [Google Cloud Tutorial](http://compsci682-fa18.github.io/gce-tutorial/) for any additional steps you may need to do for setting this up, if you are working remotely)-->
 
 If you are unfamiliar with IPython, you can also refer to our
-[IPython tutorial](/ipython-tutorial).
+[IPython tutorial](/notes/jupyter-tutorial).
 
 ### Some Notes
 **NOTE 1:** This year, the `assignment1` code has been tested to be compatible with python version `3.6` (it may work with other versions of `3.x`, but we won't be officially supporting them). You will need to make sure that during your virtual environment setup that the correct version of `python` is used. You can confirm your python version by (1) activating your virtualenv and (2) running `which python`.
