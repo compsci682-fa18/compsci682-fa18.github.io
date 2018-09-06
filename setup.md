@@ -7,11 +7,6 @@ permalink: /setup-instructions/
 ## Setup
 You can work on the assignment in one of two ways: locally on your own machine, or on a virtual machine on Google Cloud. 
 
-### Working remotely on Google Cloud (Recommended)
-
-**Note:** after following these instructions, make sure you go to **Download data** below (you can skip the **Working locally** section).
-
-As part of this course, you can use Google Cloud for your assignments. We recommend this route for anyone who is having trouble with installation set-up, or if you would like to use better CPU/GPU resources than you may have locally. Please see the set-up tutorial [here](http://compsci682-fa18.github.io/gce-tutorial/) for more details. :)
 
 ### Working locally
 
@@ -50,3 +45,7 @@ pip install -r requirements.txt  # Install dependencies
 # Work on the assignment for a while ...
 deactivate                       # Exit the virtual environment
 ```
+
+
+### Working remotely on Google Cloud
+As part of this course, you can use Google Cloud for your assignments. We recommend this route for anyone who is having trouble with installation set-up, or if you would like to use better CPU/GPU resources than you may have locally. Please see the set-up tutorial [here](http://compsci682-fa18.github.io/gce-tutorial/) for more details. :)
