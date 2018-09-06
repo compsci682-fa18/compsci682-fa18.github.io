@@ -28,7 +28,7 @@ Once you have the starter code (regardless of which method you choose above), yo
 Run the following from the `assignment1` directory:
 
 ```bash
-cd datasets
+cd cs682/datasets
 ./get_datasets.sh
 ```
 
