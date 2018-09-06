@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Python Numpy Tutorial
-permalink: /python-numpy-tutorial/
+permalink: /notes/python-numpy-tutorial/
 ---
 
 <!--
