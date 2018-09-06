@@ -88,10 +88,10 @@ print(quicksort([3,6,8,10,1,2,1]))
 ```
 
 ### Python versions
-There are currently two different supported versions of Python, 2.7 and 3.5.
+There are currently two different supported versions of Python, 2.7 and 3.6.
 Somewhat confusingly, Python 3.0 introduced many backwards-incompatible changes
-to the language, so code written for 2.7 may not work under 3.5 and vice versa.
-For this class all code will use Python 3.5.
+to the language, so code written for 2.7 may not work under 3.6 and vice versa.
+For this class all code will use Python 3.6.
 
 You can check your Python version at the command line by running
 `python --version`.
@@ -127,7 +127,7 @@ or decrement (`x--`) operators.
 
 Python also has built-in types for complex numbers;
 you can find all of the details
-[in the documentation](https://docs.python.org/3.5/library/stdtypes.html#numeric-types-int-float-complex).
+[in the documentation](https://docs.python.org/3.6/library/stdtypes.html#numeric-types-int-float-complex).
 
 **Booleans:** Python implements all of the usual operators for Boolean logic,
 but uses English words rather than symbols (`&&`, `||`, etc.):
@@ -167,7 +167,7 @@ print(s.replace('l', '(ell)'))  # Replace all instances of one substring with an
                                 # prints "he(ell)(ell)o"
 print('  world '.strip())  # Strip leading and trailing whitespace; prints "world"
 ```
-You can find a list of all string methods [in the documentation](https://docs.python.org/3.5/library/stdtypes.html#string-methods).
+You can find a list of all string methods [in the documentation](https://docs.python.org/3.6/library/stdtypes.html#string-methods).
 
 <a name='python-containers'></a>
 
@@ -192,7 +192,7 @@ x = xs.pop()      # Remove and return the last element of the list
 print(x, xs)      # Prints "bar [3, 1, 'foo']"
 ```
 As usual, you can find all the gory details about lists
-[in the documentation](https://docs.python.org/3.5/tutorial/datastructures.html#more-on-lists).
+[in the documentation](https://docs.python.org/3.6/tutorial/datastructures.html#more-on-lists).
 
 **Slicing:**
 In addition to accessing list elements one at a time, Python provides
@@ -277,7 +277,7 @@ del d['fish']         # Remove an element from a dictionary
 print(d.get('fish', 'N/A')) # "fish" is no longer a key; prints "N/A"
 ```
 You can find all you need to know about dictionaries
-[in the documentation](https://docs.python.org/3.5/library/stdtypes.html#dict).
+[in the documentation](https://docs.python.org/3.6/library/stdtypes.html#dict).
 
 **Loops:** It is easy to iterate over the keys in a dictionary:
 
@@ -328,7 +328,7 @@ print(len(animals))       # Prints "2"
 ```
 
 As usual, everything you want to know about sets can be found
-[in the documentation](https://docs.python.org/3.5/library/stdtypes.html#set).
+[in the documentation](https://docs.python.org/3.6/library/stdtypes.html#set).
 
 
 **Loops:**
@@ -367,7 +367,7 @@ print(type(t))    # Prints "<class 'tuple'>"
 print(d[t])       # Prints "5"
 print(d[(1, 2)])  # Prints "1"
 ```
-[The documentation](https://docs.python.org/3.5/tutorial/datastructures.html#tuples-and-sequences) has more information about tuples.
+[The documentation](https://docs.python.org/3.6/tutorial/datastructures.html#tuples-and-sequences) has more information about tuples.
 
 <a name='python-functions'></a>
 
@@ -401,7 +401,7 @@ hello('Bob') # Prints "Hello, Bob"
 hello('Fred', loud=True)  # Prints "HELLO, FRED!"
 ```
 There is a lot more information about Python functions
-[in the documentation](https://docs.python.org/3.5/tutorial/controlflow.html#defining-functions).
+[in the documentation](https://docs.python.org/3.6/tutorial/controlflow.html#defining-functions).
 
 <a name='python-classes'></a>
 
@@ -428,7 +428,7 @@ g.greet()            # Call an instance method; prints "Hello, Fred"
 g.greet(loud=True)   # Call an instance method; prints "HELLO, FRED!"
 ```
 You can read a lot more about Python classes
-[in the documentation](https://docs.python.org/3.5/tutorial/classes.html).
+[in the documentation](https://docs.python.org/3.6/tutorial/classes.html).
 
 <a name='numpy'></a>
 
