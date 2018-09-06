@@ -18,7 +18,7 @@ In this assignment you will practice putting together a simple image classificat
 
 ## Setup
 
-Get the code as a zip file [here](http://compsci682-fa18.github.io/assignments/assignments2018/spring1718_assignment1.zip).
+Get the code as a zip file [here](http://compsci682-fa18.github.io/assignments/assignments2018/assignment1.zip).
 
 You can follow the setup instructions [here](http://compsci682-fa18.github.io/setup-instructions/).
 <!--You can follow the setup instructions [here](http://compsci682-fa18.github.io/setup/).-->
