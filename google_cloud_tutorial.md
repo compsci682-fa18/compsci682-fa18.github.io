@@ -152,7 +152,7 @@ Click on the 3-line icon at the top of the page next to **Google Cloud Platform*
   <img src='/assets/cloud-networking-firewall-rule-682.png?'>
 </div>
 
-Click on the blue **CREATE FIREWALL RULE** button. Enter whatever name you want: we use cs231n-rule. Select "All instances in the network" for **Targets** (if the menu item exists). Enter `0.0.0.0/0` for **Source IP ranges** and `tcp:<port-number>` for **Specified protocols and ports** where `<port-number>` is the number you used above. Click on the blue **Create** button. See the screenshot below.
+Click on the blue **CREATE FIREWALL RULE** button. Enter whatever name you want: we use cs682-rule. Select "All instances in the network" for **Targets** (if the menu item exists). Enter `0.0.0.0/0` for **Source IP ranges** and `tcp:<port-number>` for **Specified protocols and ports** where `<port-number>` is the number you used above. Click on the blue **Create** button. See the screenshot below.
 
 <div class='fig figcenter fighighlight'>
   <img src='/assets/cloud-networking-firewall-rule-create-682.png?'>
@@ -187,7 +187,13 @@ If you visit the above URL on your local browser, you should see something like 
   <img src='/assets/cloud-jupyter-screen-682.png'>
 </div>
 
-## Submission: Transferring Files From Your Instance To Your Computer ##
+## Transferring Files From Your Computer To Your Instance ##
+
+To upload a file to GCE:
+
+```
+gcloud compute scp /my/local/file tonystark@cs682-vm:
+```
 
 When you are done with your assignments, run the submission script in your assignment folder to make a zip file. Please refer to specific instructions for each assignment.  
 
@@ -200,13 +206,7 @@ gcloud compute scp <user>@<instance-name>:/path/to/assignment1.zip /local/path
 For example, to download files from our instance to the current folder:
 
 ```
-gcloud compute scp tonystark@cs682:assignment1.zip .
-```
-
-The transfer works in both directions. To upload a file to GCE:
-
-```
-gcloud compute scp /my/local/file tonystark@cs231:
+gcloud compute scp tonystark@cs682-vm:assignment1.zip .
 ```
 
 Another (perhaps easier) option proposed by a student is to directly download the zip file from Jupyter. After running the submission script and creating assignment1.zip, you can download that file directly from Jupyter. To do this, go to Jupyter Notebook and click on the zip file, which will be downloaded to your local computer.
