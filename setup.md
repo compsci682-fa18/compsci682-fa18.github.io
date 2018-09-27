@@ -6,12 +6,16 @@ permalink: /setup-instructions/
 
 ## Setup
 <!--
-You can work on the assignment in one of two ways: locally on your own machine, or on a virtual machine on Google Cloud. 
+You can work on the assignment in one of two ways: locally on your own machine, or on a virtual machine on Google Cloud.
 
 
 ### Working locally
 -->
 
+### Working Remotely on Google Cloud
+See [Google Cloud Tutorial](http://compsci682-fa18.github.io/gce-tutorial/)
+
+### Working locally
 **Installing Anaconda:**
 We recommend using the free [Anaconda Python distribution](https://www.anaconda.com/download/), which provides an easy way for you to handle package dependencies. Please be sure to download the Python 3 version, which currently installs Python 3.6. We are no longer supporting Python 2.
 

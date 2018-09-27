@@ -12,92 +12,102 @@ are as follows:
   architectures
 - understand and be able to implement (vectorized) **backpropagation**
 - implement various **update rules** used to optimize Neural Networks
-- implement **batch normalization** for training deep networks
-- implement **dropout** to regularize networks
-- effectively **cross-validate** and find the best hyperparameters for Neural
-  Network architecture
-- understand the architecture of **Convolutional Neural Networks** and train
-  gain experience with training these models on data
+- implement **Batch Normalization** and **Layer Normalization** for training deep networks
+- implement **Dropout** to regularize networks
+- understand the architecture of **Convolutional Neural Networks** and
+  get practice with training these models on data
+- gain experience with a major deep learning framework, such as **TensorFlow** or **PyTorch**.
 
-### Setup
-Get the code as a zip file [here](http://vis-www.cs.umass.edu/682/asgns/assignment2.zip). As for the dependencies:
+## Setup
+Get the code as a zip file [here](http://compsci682-fa18.github.io/assignments/assignments2018/assignment2.zip).
 
-**[Option 1] Use Anaconda:**
-The preferred approach for installing all the assignment dependencies is to use [Anaconda](https://www.continuum.io/downloads), which is a Python distribution that includes many of the most popular Python packages for science, math, engineering and data analysis. Once you install it you can skip all mentions of requirements and you're ready to go directly to working on the assignment.
+You can follow the setup instructions [here](http://compsci682-fa18.github.io/setup-instructions/). If you would like to use good CPU/GPU resources, you can use [Google Cloud](http://compsci682-fa18.github.io/gce-tutorial/).
 
-**[Option 2] Manual install, virtual environment:**
-If you'd like to (instead of Anaconda) go with a more manual and risky installation route you will likely want to create a [virtual environment](http://docs.python-guide.org/en/latest/dev/virtualenvs/) for the project. If you choose not to use a virtual environment, it is up to you to make sure that all dependencies for the code are installed globally on your machine. To set up a virtual environment, run the following:
+<!-- **NOTE: Our initial release of the assignment did not include the PyTorch and TensorFlow notebooks for Q5. These have now been finalized, and the zip file has been updated with these notebooks.** -->
 
-```bash
-cd assignment2
-sudo pip install virtualenv      # This may already be installed
-virtualenv .env                  # Create a virtual environment
-source .env/bin/activate         # Activate the virtual environment
-pip install -r requirements.txt  # Install dependencies
-# Work on the assignment for a while ...
-deactivate                       # Exit the virtual environment
-```
-
-**Download data:**
+### Download data:
 Once you have the starter code, you will need to download the CIFAR-10 dataset.
 Run the following from the `assignment2` directory:
 
 ```bash
-cd datasets
+cd cs682/datasets
 ./get_datasets.sh
 ```
 
-**Compile the Cython extension:** 
-Convolutional Neural Networks require a very
-efficient implementation. We have implemented of the functionality using
-[Cython](http://cython.org/); you will need to compile the Cython extension
-before you can run the code. From the `assignment2/asgn2` directory, run the following
-command:
+### Start IPython:
+After you have the CIFAR-10 data, you should start the IPython notebook server from the
+`assignment2` directory, with the `jupyter notebook` command.
+<!--
+After you have the CIFAR-10 data, you should start the IPython notebook server from the
+`assignment2` directory, with the `jupyter notebook` command. (See the [Google Cloud Tutorial](http://cs231n.github.io/gce-tutorial/) for any additional steps you may need to do for setting this up, if you are working remotely). -->
 
-```bash
-python setup.py build_ext --inplace
-```
+If you are unfamiliar with IPython, you can also refer to [IPython tutorial](/ipython-tutorial).
 
-**NOTE:** Check [this page](https://github.com/cython/cython/wiki/CythonExtensionsOnWindows) if you are using windows and having the "unable to find vcvarsall.bat" error.
+### Some Notes
+**NOTE 1:** This year, the `assignment2` code has been tested to be compatible with python version `3.6` (it may work with other versions of `3.x`, but we won't be officially supporting them). You will need to make sure that during your virtual environment setup that the correct version of `python` is used. You can confirm your python version by (1) activating your virtualenv and (2) running `which python`.
 
-**Start Jupyter Notebook:**
-After you have the CIFAR-10 data, you should start the Jupyter Notebook server from the
-`assignment2` directory. If you are unfamiliar with Jupyter, you should read our
-[Jupyter tutorial](/notes/jupyter-tutorial/).
+**NOTE 2:** If you are working in a virtual environment on OSX, you may *potentially* encounter
+errors with matplotlib due to the [issues described here](http://matplotlib.org/faq/virtualenv_faq.html). In our testing, it seems that this issue is no longer present with the most recent version of matplotlib, but if you do end up running into this issue you may have to use the `start_ipython_osx.sh` script from the `assignment2` directory (instead of `jupyter notebook` above) to launch your IPython notebook server. Note that you may have to modify some variables within the script to match your version of python/installation directory. The script assumes that your virtual environment is named `.env`.
 
-**NOTE:** If you are working in a virtual environment on OSX, you may encounter
-errors with matplotlib due to the [issues described here](http://matplotlib.org/faq/virtualenv_faq.html). You can work around this issue by starting the Jupyter server using the `start_jupyter_osx.sh` script from the `assignment2` directory; the script assumes that your virtual environment is named `.env`.
-
-### Submitting your work
-
-To make sure everything is working properly, **remember to do a clean run ("Kernel -> Restart & Run All") after you finish work for each notebook** and submit the final version with all the outputs. 
-Once you are done working, zip all the code and notebooks in a single file and upload it to Moodle. On Linux or macOS you can run the provided `collectSubmission.sh` script from `assignment2/` to produce a file `assignment2.zip`.
-
-### Q1: Fully-connected Neural Network (30 points)
-The Jupyter notebook `FullyConnectedNets.ipynb` will introduce you to our
+### Q1: Fully-connected Neural Network (20 points)
+The IPython notebook `FullyConnectedNets.ipynb` will introduce you to our
 modular layer design, and then use those layers to implement fully-connected
 networks of arbitrary depth. To optimize these models you will implement several
 popular update rules.
 
 ### Q2: Batch Normalization (30 points)
-In the Jupyter notebook `BatchNormalization.ipynb` you will implement batch
+In the IPython notebook `BatchNormalization.ipynb` you will implement batch
 normalization, and use it to train deep fully-connected networks.
 
 ### Q3: Dropout (10 points)
-The Jupyter notebook `Dropout.ipynb` will help you implement Dropout and explore
+The IPython notebook `Dropout.ipynb` will help you implement Dropout and explore
 its effects on model generalization.
 
-### Q4: ConvNet on CIFAR-10 (30 points)
-In the Jupyter Notebook `ConvolutionalNetworks.ipynb` you will implement several
-new layers that are commonly used in convolutional networks. You will train a
-(shallow) convolutional network on CIFAR-10, and it will then be up to you to
-train the best network that you can.
+### Q4: Convolutional Networks (30 points)
+In the IPython Notebook `ConvolutionalNetworks.ipynb` you will implement several new layers that are commonly used in convolutional networks.
 
-### Q5: Do something extra! (up to +10 points)
-In the process of training your network, you should feel free to implement
-anything that you want to get better performance. You can modify the solver,
-implement additional layers, use different types of regularization, use an
-ensemble of models, or anything else that comes to mind. If you implement these
-or other ideas not covered in the assignment then you will be awarded some bonus
-points.
+### Q5: PyTorch / TensorFlow on CIFAR-10 (10 points)
+For this last part, you will be working in either [TensorFlow](https://www.tensorflow.org/install/) or [PyTorch](https://pytorch.org/), two popular and powerful deep learning frameworks. **You only need to complete ONE of these two notebooks.** You do NOT need to do both, and we will _not_ be awarding extra credit to those who do.
 
+Open up either `PyTorch.ipynb` or `TensorFlow.ipynb`. There, you will learn how the framework works, culminating in training a  convolutional network of your own design on CIFAR-10 to get the best performance you can.
+
+**NOTE**: The PyTorch notebook requires PyTorch version 0.4, which was released on 4/24/2018. You can install this version of PyTorch using conda or pip by following the instructions here: http://pytorch.org/
+
+
+### Submitting your work
+There are **_two_** steps to submitting your assignment:
+
+**1.** Submit a pdf of the completed iPython notebooks to [Gradescope](https://gradescope.com/courses/24357). If you are enrolled in the course, then you should have already been automatically added to the course on Gradescope.
+
+To produce a pdf of your work, you can first convert each of the .ipynb files to HTML. To do this, simply run from your assignment directory
+
+```bash
+jupyter nbconvert --to html FILE.ipynb
+```
+for each of the notebooks, where `FILE.ipynb` is the notebook you want to convert. Then you can convert the HTML files to PDFs with your favorite web browser, and then concatenate them all together in your favorite PDF viewer/editor. Submit this final PDF on Gradescope, and be sure to tag the questions correctly!
+
+**Important:** _Please make sure that the submitted notebooks have been run and the cell outputs are visible._
+
+**2.** Submit a zip file of your assignment to [Gradescope](https://gradescope.com/courses/24357). To do this, run the provided `collectSubmission.sh` script, which will produce a file called `assignment2.zip`.
+
+
+<!-- **2.** Submit a zip file of your assignment on AFS. To do this, run the provided `collectSubmission.sh` script, which will produce a file called `assignment2.zip`. You will then need to SCP this file over to Stanford AFS using the following command (entering your Stanford password if requested):
+
+```bash
+# Run from the assignment directory where the zip file is located
+scp assignment2.zip YOUR_SUNET@myth.stanford.edu:~/DEST_PATH
+```
+
+`YOUR_SUNET` should be replaced with your SUNetID (e.g. `jdoe`), and `DEST_PATH` should be a path to an existing directory on AFS where you want the zip file to be copied to (you may want to create a CS231N directory for convenience). Once this is done, run the following: -->
+
+ <!-- ```bash
+# SSH into the Stanford Myth machines
+ssh YOUR_SUNET@myth.stanford.edu
+
+# Descend into the directory where the zip file is now located
+cd DEST_PATH
+
+# Run the script to actually submit the assignment
+/afs/ir/class/cs231n/submit
+```
+Once you run the submit script, simply follow the on-screen prompts to finish submitting the assignment on AFS. If successful, you should see a "SUBMIT SUCCESS" message output by the script. -->
