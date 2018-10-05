@@ -34,6 +34,20 @@ cd cs682/datasets
 ./get_datasets.sh
 ```
 
+**Compile the Cython extension:** 
+Convolutional Neural Networks require a very
+efficient implementation. We have implemented of the functionality using
+[Cython](http://cython.org/); you will need to compile the Cython extension
+before you can run the code. From the `assignment2/asgn2` directory, run the following
+command:
+
+```bash
+python setup.py build_ext --inplace
+```
+
+**NOTE:** Check [this page](https://github.com/cython/cython/wiki/CythonExtensionsOnWindows) if you are using windows and having the "unable to find vcvarsall.bat" error.
+
+
 ### Start IPython:
 After you have the CIFAR-10 data, you should start the IPython notebook server from the
 `assignment2` directory, with the `jupyter notebook` command.
