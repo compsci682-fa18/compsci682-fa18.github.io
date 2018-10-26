@@ -17,7 +17,7 @@ The goals of this assignment are as follows:
 
 ## Setup
 
-Get the code as a zip file [here](http://compsci682-fa18.github.io/assignments/2018/assignment3.zip).
+Get the code as a zip file [here](http://compsci682-fa18.github.io/assignments/assignments2018/assignment3.zip).
 
 You can follow the setup instructions [here](http://compsci682-fa18.github.io/setup-instructions/).
 
